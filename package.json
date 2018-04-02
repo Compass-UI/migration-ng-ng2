@@ -6,6 +6,9 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "@types/angular": "1.5.11",
+    "@types/core-js": "0.9.46",
+    "@types/jasmine": "2.8.6",
     "bower": "^1.7.7",
     "http-server": "^0.9.0",
     "jasmine-core": "^2.4.1",
