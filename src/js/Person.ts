@@ -1,11 +1,11 @@
-interface IPerson {
+export interface IPerson {
     firstName: string;
     lastName: string;
     getFullName(): string;
     setFullName(getFullName: string): void;
     saveName(cb: (firstName: string, lastName: string) => void): void;
 }
-class Person implements IPerson {/** Duplicate identifier error due to compiled Person.js - OK */
+export class Person implements IPerson {/** Duplicate identifier error due to compiled Person.js - OK */
 
     constructor(public firstName: string, public lastName: string){};
     getFullName(){

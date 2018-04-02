@@ -1,3 +1,5 @@
+"use strict";
+exports.__esModule = true;
 var Person = /** @class */ (function () {
     function Person(firstName, lastName) {
         this.firstName = firstName;
@@ -16,6 +18,7 @@ var Person = /** @class */ (function () {
     };
     return Person;
 }());
+exports.Person = Person;
 var david = new Person("David", "Shams");
 console.log(david);
 console.log(david.getFullName());
