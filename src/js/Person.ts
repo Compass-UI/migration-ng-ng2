@@ -5,7 +5,7 @@ interface IPerson {
     setFullName(getFullName: string): void;
     saveName(cb: (firstName: string, lastName: string) => void): void;
 }
-class Person implements IPerson {
+class Person implements IPerson {/** Duplicate identifier error due to compiled Person.js - OK */
 
     constructor(public firstName: string, public lastName: string){};
     getFullName(){
@@ -20,3 +20,8 @@ class Person implements IPerson {
         cb(this.firstName, this.lastName)
     }
 }
+
+var david = new Person(`David`, `Shams`);
+
+console.log(david);
+console.log(david.getFullName());
