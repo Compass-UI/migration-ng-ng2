@@ -1,9 +1,14 @@
-var ccCompass = angular.module('ualCompass', []);
+var ualCompass = angular.module('ualCompass', []);
 
-angular.module('ccCompass').directive('MaintCtrl', ['$scope', function($scope){
+angular.module('ualCompass').controller('MaintCtrl', ['$scope', function($scope){
     $scope.version = "0.1"
-}])
+}]).component('sessionDetail', {
+    template: `
+    <div>Session Detail</div>
+    <div>{{$ctrl.version}}</div>
+    `
+})
 
 angular.element(document).ready(function(){
-  angular.bootstrap(html, ['ccCompass'])  
+  angular.bootstrap(document.body, ['ualCompass'])  
 })

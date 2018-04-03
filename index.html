@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head ng-app="ccAero">
+<head ng-app="ualCompass">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Migrating AngularJS to Angular</title>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="src/js/app.js"></script>
 </head>
 <body>
+    <div ng-controller="MainCtrl">
+        Version: {{version}}
+        <session-detail></session-detail>  
+    </div>
     
 </body>
 </html>

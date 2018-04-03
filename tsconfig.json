@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "system",
+        "target": "ES5",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "outFile": "./built/local/tsc.js",
+        "sourceMap": true
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "bower_components",
+        "**/*.spec.ts"
+    ]
+}
