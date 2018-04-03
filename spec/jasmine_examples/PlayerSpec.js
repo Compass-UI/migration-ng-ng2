@@ -6,14 +6,14 @@ describe("Player", function() {
   var song;
 
   beforeEach(function() {
-    // player = new Player();
-    // song = new Song();
+    player = new Player();
+    song = new Song();
   });
 
   it("should be able to play a Song", function() {
     expect(true).toEqual(true);
     // require(['/lib/jasmine_examples/Player', '/jasmine_examples/Song'], function(player, song){
-      require(['player', 'song'], function(player, song){
+      require(['player', 'song', './spec/helpers/jasmine_examples/SpecHelper'], function(player, song, sh){
       
     player.play(song);
     expect(player.currentlyPlayingSong).toEqual(song);
@@ -25,18 +25,20 @@ describe("Player", function() {
 
   describe("when song has been paused", function() {
     beforeEach(function() {
-      // player.play(song);
-      // player.pause();
+      player.play(song);
+      player.pause();
     });
 
     it("should indicate that the song is currently paused", function() {
     expect(true).toEqual(true);
       
       // require(['/lib/jasmine_examples/Player', '/lib/jasmine_examples/Song'], function(player, song){
-        require(['player', 'song'], function(player, song){
+        // require(['player', 'song'], function(player, song){
+      require(['player', 'song', './spec/helpers/jasmine_examples/SpecHelper'], function(player, song, SpecHelper){
+          
       
         
-      expect(player.isPlaying).toBeFalsy();
+      expect(player.sh.isPlaying).toBeFalsy();
 
       // demonstrates use of 'not' with a custom matcher
       expect(player).not.toBePlaying(song);
