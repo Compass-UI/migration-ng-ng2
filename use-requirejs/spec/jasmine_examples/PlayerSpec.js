@@ -5,15 +5,32 @@ describe("Player", function() {
   var player;
   var song;
 
-  beforeEach(function() {
-    player = new Player();
-    song = new Song();
+  beforeEach(function () {
+    jasmine.addMatchers({
+      toBePlaying: function () {
+        return {
+          compare: function (actual, expected) {
+            var player = actual;
+  
+            return {
+              pass: player.currentlyPlayingSong === expected && player.isPlaying
+            }
+          }
+        };
+      }
+    });
   });
+  
+  // beforeEach(function() {
+  //   player = new Player();
+  //   song = new Song();
+  // });
 
-  it("should be able to play a Song", function() {
+  it("should be able to play a Song", function(done) {
     expect(true).toEqual(true);
-    // require(['/lib/jasmine_examples/Player', '/jasmine_examples/Song'], function(player, song){
-      require(['player', 'song', './spec/helpers/jasmine_examples/SpecHelper'], function(player, song, SpecHelper){
+    require(['./lib/jasmine_examples/Player', './lib/jasmine_examples/Song'], function(player, song){
+      // require(['player', 'song', './spec/helpers/jasmine_examples/SpecHelper'], function(player, song, SpecHelper){
+        console.log(player);
       
 
         // var player = new Player();
@@ -25,6 +42,7 @@ describe("Player", function() {
     //demonstrates use of custom matcher
     expect(player).toBePlaying(song);
     })
+    done();
   });
 
   describe("when song has been paused", function() {
@@ -33,7 +51,7 @@ describe("Player", function() {
       player.pause();
     });
 
-    it("should indicate that the song is currently paused", function() {
+    it("should indicate that the song is currently paused", function(done) {
     expect(true).toEqual(true);
       
       // require(['/lib/jasmine_examples/Player', '/lib/jasmine_examples/Song'], function(player, song){
@@ -48,6 +66,7 @@ describe("Player", function() {
       // demonstrates use of 'not' with a custom matcher
       expect(player).not.toBePlaying(song);
         })
+        done();
     });
 
     // it("should be possible to resume", function() {
