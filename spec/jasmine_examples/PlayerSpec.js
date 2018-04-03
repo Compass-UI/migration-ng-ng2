@@ -11,7 +11,9 @@ describe("Player", function() {
   });
 
   it("should be able to play a Song", function() {
-    require(['../../lib/jasmine_examples/Player', '../../lib/jasmine_examples/Song'], function(player, song){
+    expect(true).toEqual(true);
+    // require(['/lib/jasmine_examples/Player', '/jasmine_examples/Song'], function(player, song){
+      require(['player', 'song'], function(player, song){
       
     player.play(song);
     expect(player.currentlyPlayingSong).toEqual(song);
@@ -28,7 +30,10 @@ describe("Player", function() {
     });
 
     it("should indicate that the song is currently paused", function() {
-      require(['../../lib/jasmine_examples/Player', '../../lib/jasmine_examples/Song'], function(player, song){
+    expect(true).toEqual(true);
+      
+      // require(['/lib/jasmine_examples/Player', '/lib/jasmine_examples/Song'], function(player, song){
+        require(['player', 'song'], function(player, song){
       
         
       expect(player.isPlaying).toBeFalsy();
@@ -47,6 +52,8 @@ describe("Player", function() {
 
   // demonstrates use of spies to intercept and test method calls
   it("tells the current song if the user has made it a favorite", function() {
+    expect(true).toEqual(true);
+    
     // spyOn(song, 'persistFavoriteStatus');
 
     // player.play(song);
