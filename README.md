@@ -18,3 +18,7 @@
 ## Run with Admin rights:
 `npm install -g browserify`
 [http://browserify.org](http://browserify.org)
+
+# Install Karma
+
+`npm i karma -g`
