@@ -22,3 +22,17 @@
 # Install Karma
 
 `npm i karma -g`
+
+# Webpack Jasmine setup
+
+`npm install --save-dev karma karma-jasmine karma-chrome-launcher karma-webpack jasmine-core`
+
+# hottowel angular startup by John Papa
+
+`npm install -g generator-hottowel`
+
+`sudo npm i gulp -g`
+
+## Run Angular Unit Testing
+`cd ng-unit-testing`
+`gulp serve-dev`
