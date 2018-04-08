@@ -36,3 +36,11 @@
 ## Run Angular Unit Testing
 `cd ng-unit-testing`
 `gulp serve-dev`
+
+Unit Test run
+`gulp test`
+
+Unit Test run browser
+
+`gulp serve-specs`
+
